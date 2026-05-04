@@ -17,13 +17,13 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
      void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
+  //      if (Input.GetKeyDown(KeyCode.Space))
+   //     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput= Input.GetAxis("Vertical");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
         transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
-        }
+    //    }
         }
     }
 
