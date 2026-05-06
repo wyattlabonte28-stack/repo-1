@@ -1,12 +1,8 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Easy FPS/_scene/LightingData.asset.meta
 guid: e0fbfbfff8ccb4b3685474c904d31971
-========
-guid: 96b96b3fd71cb474287f640ba20f1887
->>>>>>>> 03ea73262a90d7cdeaa6f39fa024290c6ddde984:Assets/SimpleNaturePack/Scenes/official scene/LightingData.asset.meta
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 6475696996188705980
+  mainObjectFileID: 112000000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
