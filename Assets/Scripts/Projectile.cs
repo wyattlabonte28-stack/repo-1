@@ -5,7 +5,6 @@ public class Projectile : MonoBehaviour
     public float speed = 10.0f;
     public GameObject[] projectilePrefab;
     public GameObject gunRotation;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,5 +25,4 @@ public class Projectile : MonoBehaviour
 
      }   
     }
-
 }

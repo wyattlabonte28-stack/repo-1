@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -1351079227191793455}
   m_Layer: 0
   m_Name: Frappe B
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProMove
   speed: 30
-  focalPoint: {fileID: 0}
+  delete: 50
+  Enemy: {fileID: 0}
 --- !u!65 &-3165303753649131897
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -143,7 +144,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5375643072503878203}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 66afdaf808b384b9ebb7b2dda1cce8a1, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -151,7 +152,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
