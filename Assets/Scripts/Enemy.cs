@@ -32,5 +32,13 @@ public class Enemy : MonoBehaviour
             transform.LookAt(new Vector3(player.position.x, transform.position.y, player.position.z));
         }
     }
-
+private void OnCollisionEnter(Collision collision)
+    {
+        // Check if the collided object has the "Ground" tag
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            Debug.Log("Enemy hit the ground!");
+            // Insert your landing logic here (e.g., stop falling animation)
+        }
+    }
 }
