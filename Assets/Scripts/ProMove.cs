@@ -3,7 +3,7 @@ using UnityEngine;
 public class ProMove : MonoBehaviour
 {
     public float speed = 5.0f;
-    public GameObject focalPoint;
+    public float delete = 50; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,5 +14,6 @@ public class ProMove : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        
     }
 }
