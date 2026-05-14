@@ -19,7 +19,7 @@ public class Projectile : MonoBehaviour
 
 
 
-     if (Input.GetKeyDown(KeyCode.Space))
+     if (Input.GetKeyDown(KeyCode.Mouse0))
      {
                       int projectileIndex = Random.Range(0, projectilePrefab.Length);
         Instantiate(projectilePrefab[projectileIndex], transform.position, gunRotation.transform.rotation);
