@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd40d9e8950943a6a9f569bfa54cdaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProMove
-  speed: 30
+  speed: 5
   delete: 50
   Enemy: {fileID: 0}
 --- !u!65 &2446672544599960321
