@@ -1,14 +1,18 @@
+
+
 using UnityEngine;
 
 public class ProMove : MonoBehaviour
 {
     public float speed = 5.0f;
     public float delete = 50; 
+
     public GameObject Enemy;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         transform.Rotate(0, 270, 0);
+
     }
 
     // Update is called once per frame
@@ -27,6 +31,7 @@ public class ProMove : MonoBehaviour
             Debug.Log("Enemy got hit!");
             // Insert your landing logic here (e.g., stop falling animation)
         }
+
     }
 
 }
