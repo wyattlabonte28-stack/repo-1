@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public float moveForce = 10f;
     private Rigidbody rb;
     public GameObject pro;
+    public GameObject Player;
 
 
     void Start()
@@ -41,14 +42,16 @@ private void OnCollisionEnter(Collision collision)
             Debug.Log("Enemy hit the ground!");
                         Destroy(gameObject);
             Destroy(pro.gameObject);
+        }
+            // Insert your landing logic here (e.g., stop falling animation)
+                    if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+            Destroy(Player.gameObject);
+            Debug.Log("Player got hit!");
             // Insert your landing logic here (e.g., stop falling animation)
         }
+        
     }
-  //          if (collision.gameObject.CompareTag("Enemy"))
-  //      {
-   //         Destroy(gameObject);
-   //         Destroy(Enemy.gameObject);
-   //         Debug.Log("Enemy got hit!");
-   //         // Insert your landing logic here (e.g., stop falling animation)
-  //      }
+
 }
