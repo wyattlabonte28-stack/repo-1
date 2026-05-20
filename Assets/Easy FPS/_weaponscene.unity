@@ -444,12 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d71796130a9e491d85507c96041d66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  speed: 10
-  projectilePrefab:
-  - {fileID: 5226332520681078392, guid: 7cab55fe5baf447ce82e0a63ab2237e7, type: 3}
-  - {fileID: 1123712125520955082, guid: cfda7d6b958744a44acc131e2170ceb9, type: 3}
-  - {fileID: 5375643072503878203, guid: 63c2cca6bf27143a0aed7bed475f42ea, type: 3}
-  - {fileID: 6834081763223376121, guid: 723f60755bb814ec984012d101553d31, type: 3}
+  projectilePrefab: {fileID: 5375643072503878203, guid: 63c2cca6bf27143a0aed7bed475f42ea, type: 3}
   gunRotation: {fileID: 732588616}
 --- !u!1 &789562620
 GameObject:
@@ -929,7 +924,8 @@ MonoBehaviour:
   canRun: 1
   runSpeed: 9
   runningKey: 304
-  jumpForce: 5
+  jumpForce: 4
+  cooldownTime: 0.5
 --- !u!1001 &1496685857
 PrefabInstance:
   m_ObjectHideFlags: 0
