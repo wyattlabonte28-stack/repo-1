@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerDeath : MonoBehaviour
 {
     public GameObject Enemy;
+        public GameObject Self;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,7 +24,7 @@ public class PlayerDeath : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(gameObject);
-            Destroy(Enemy.gameObject);
+            Destroy(collision.gameObject);
             Debug.Log("Player got hit!");
             // Insert your landing logic here (e.g., stop falling animation)
         }

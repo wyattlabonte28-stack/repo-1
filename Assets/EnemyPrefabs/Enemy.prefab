@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1776966266084158026, guid: f99bbd0754201f448b27f0c455b92b76, type: 3}
       propertyPath: m_Name
-      value: Zombie
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1776966266084158026, guid: f99bbd0754201f448b27f0c455b92b76, type: 3}
       propertyPath: m_TagString
@@ -85,6 +85,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1776966266084158026, guid: f99bbd0754201f448b27f0c455b92b76, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7054378234137204847}
+    - targetCorrespondingSourceObject: {fileID: 1776966266084158026, guid: f99bbd0754201f448b27f0c455b92b76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7081892122794899613}
   m_SourcePrefab: {fileID: 100100000, guid: f99bbd0754201f448b27f0c455b92b76, type: 3}
 --- !u!1 &722420091958125177 stripped
 GameObject:
@@ -105,6 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   player: {fileID: 0}
   moveForce: 114
+  pro: {fileID: 0}
+  Player: {fileID: 1741003162287172391, guid: dbdf4bf0540d14dbd9549ac82d49a221, type: 3}
 --- !u!54 &3329044255385901099
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -147,9 +152,30 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5804887, y: 1.9453626, z: 0.9312997}
+  m_Center: {x: -0.0012695789, y: 0.9489819, z: 0.03435027}
+--- !u!65 &7081892122794899613
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722420091958125177}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.9453626, z: 1}
-  m_Center: {x: 0, y: 0.9489819, z: 0}
+  m_Size: {x: 0.7270446, y: 1.9836246, z: 1}
+  m_Center: {x: 0.0025002956, y: 0.98057336, z: 0}

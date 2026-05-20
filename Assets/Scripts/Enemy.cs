@@ -48,7 +48,7 @@ private void OnCollisionEnter(Collision collision)
         {
             Destroy(gameObject);
             Destroy(Player.gameObject);
-            Debug.Log("Player got hit!");
+            Debug.Log("Player got hit");
             // Insert your landing logic here (e.g., stop falling animation)
         }
         
