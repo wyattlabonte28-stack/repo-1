@@ -1,24 +1,21 @@
-
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class ProMove : MonoBehaviour
+public class PlayerDeath : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float delete = 50; 
-
     public GameObject Enemy;
+        public GameObject Self;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        transform.Rotate(0, 270, 0);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
         
     }
         private void OnCollisionEnter(Collision collision)
@@ -27,11 +24,10 @@ public class ProMove : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(gameObject);
-            Destroy(Enemy.gameObject);
-            Debug.Log("Enemy got hit!");
+            Destroy(collision.gameObject);
+            Debug.Log("Player got hit!");
             // Insert your landing logic here (e.g., stop falling animation)
         }
 
     }
-
 }

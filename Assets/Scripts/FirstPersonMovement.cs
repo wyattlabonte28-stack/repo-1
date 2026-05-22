@@ -11,6 +11,8 @@ public class FirstPersonMovement : MonoBehaviour
     public float runSpeed = 9;
     public KeyCode runningKey = KeyCode.LeftShift;
     public float jumpForce = 10f;
+    public float cooldownTime = 10f;
+    private float lastInputTime;
 
 
     Rigidbody rigidbody;
@@ -45,9 +47,11 @@ public class FirstPersonMovement : MonoBehaviour
     void Update()
     {
         // Detect if the Space bar is pressed
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)&& Time.time >= lastInputTime + cooldownTime)
         {
+            
             // Apply upward force using Impulse mode for a "snap" effect
+            lastInputTime = Time.time; 
             rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
 

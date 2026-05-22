@@ -1,11 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 10.0f;
-    public GameObject[] projectilePrefab;
+   
+    public GameObject projectilePrefab;
     public GameObject gunRotation;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,10 +22,9 @@ public class Projectile : MonoBehaviour
 
      if (Input.GetKeyDown(KeyCode.Mouse0))
      {
-                      int projectileIndex = Random.Range(0, projectilePrefab.Length);
-        Instantiate(projectilePrefab[projectileIndex], transform.position, gunRotation.transform.rotation);
+                      
+        Instantiate(projectilePrefab, transform.position, gunRotation.transform.rotation);
 
      }   
     }
-
 }

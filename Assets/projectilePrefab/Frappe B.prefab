@@ -13,11 +13,12 @@ GameObject:
   - component: {fileID: 7311462644138446388}
   - component: {fileID: 6086394972721806948}
   - component: {fileID: 3891051601599697149}
-  - component: {fileID: -3165303753649131897}
   - component: {fileID: -1351079227191793455}
+  - component: {fileID: -6778292274787214523}
+  - component: {fileID: -3049565864759369516}
   m_Layer: 0
   m_Name: Frappe B
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,8 +31,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5375643072503878203}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.11044, y: 0.5, z: 1.91683}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.11044, y: 0.369, z: 1.924}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -103,7 +104,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5375643072503878203}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 20
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -120,7 +121,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 90
   m_CollisionDetection: 0
 --- !u!114 &3891051601599697149
 MonoBehaviour:
@@ -135,9 +136,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProMove
   speed: 30
-  focalPoint: {fileID: 0}
---- !u!65 &-3165303753649131897
-BoxCollider:
+  delete: 50
+  Enemy: {fileID: 0}
+--- !u!114 &-1351079227191793455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5375643072503878203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2277166db4ac34d6481643a23fe44d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectile
+--- !u!136 &-6778292274787214523
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -154,18 +168,31 @@ BoxCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.35762787, y: 0.7449866, z: 0.35582316}
-  m_Center: {x: -0.0037419498, y: 0.37249324, z: -0.0026400462}
---- !u!114 &-1351079227191793455
-MonoBehaviour:
+  serializedVersion: 2
+  m_Radius: 0.110995114
+  m_Height: 0.5153361
+  m_Direction: 1
+  m_Center: {x: -0.061849758, y: 0.27946898, z: -0.0020945668}
+--- !u!136 &-3049565864759369516
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5375643072503878203}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2277166db4ac34d6481643a23fe44d60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectile
+  serializedVersion: 2
+  m_Radius: 0.17881393
+  m_Height: 0.7449866
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.37249324, z: -0.0026400462}
