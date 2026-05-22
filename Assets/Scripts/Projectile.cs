@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
    
     public GameObject projectilePrefab;
+    public GameObject tipOfBarrel;
     public GameObject gunRotation;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,7 +24,7 @@ public class Projectile : MonoBehaviour
      if (Input.GetKeyDown(KeyCode.Mouse0))
      {
                       
-        Instantiate(projectilePrefab, transform.position, gunRotation.transform.rotation);
+        Instantiate(projectilePrefab, tipOfBarrel.transform.position, gunRotation.transform.rotation);
 
      }   
     }

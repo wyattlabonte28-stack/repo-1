@@ -11,8 +11,8 @@ public class ProMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        transform.Rotate(0, 270, 0);
 
+        transform.Rotate(0, 270, 0);
     }
 
     // Update is called once per frame
