@@ -28,6 +28,7 @@ public class PlayerDeath : MonoBehaviour
             Debug.Log("Player got hit!");
             // Insert your landing logic here (e.g., stop falling animation)
         }
+        
 
     }
 }
