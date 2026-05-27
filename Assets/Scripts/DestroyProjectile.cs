@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class DestroyProjectile : MonoBehaviour
 {
-    private float topBound = 30;
-    private float lowerBound = -30;
+    private float topBound = 50;
+    private float lowerBound = -50;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

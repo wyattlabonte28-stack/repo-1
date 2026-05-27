@@ -12,7 +12,7 @@ public class ProMove : MonoBehaviour
     void Start()
     {
 
-        transform.Rotate(0, 270, 0);
+        transform.Rotate(0, 269, 0);
     }
 
     // Update is called once per frame

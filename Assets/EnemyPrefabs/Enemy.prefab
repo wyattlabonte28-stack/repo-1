@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   player: {fileID: 0}
-  moveForce: 114
+  moveForce: 900
   pro: {fileID: 0}
   Player: {fileID: 1741003162287172391, guid: dbdf4bf0540d14dbd9549ac82d49a221, type: 3}
 --- !u!54 &3329044255385901099
