@@ -26,7 +26,7 @@ public class Projectile : MonoBehaviour
 
      if (Input.GetKeyDown(KeyCode.Mouse0))
      {
-                   ProjectileAudio.PlayOneShot(GunSound, 1.0f);   
+                   ProjectileAudio.PlayOneShot(GunSound, 0.1f);   
         Instantiate(projectilePrefab, tipOfBarrel.transform.position, gunRotation.transform.rotation);
         
      }   

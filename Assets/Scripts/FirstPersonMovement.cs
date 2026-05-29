@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class FirstPersonMovement : MonoBehaviour
@@ -13,12 +14,17 @@ public class FirstPersonMovement : MonoBehaviour
     public float jumpForce = 10f;
     public float cooldownTime = 10f;
     private float lastInputTime;
-
+    public AudioClip FireSound; 
+    private AudioSource FirstPersonMovementAudio;
 
     Rigidbody rigidbody;
     /// <summary> Functions to override movement speed. Will use the last added override. </summary>
     public List<System.Func<float>> speedOverrides = new List<System.Func<float>>();
 
+    void Start() 
+    {
+         FirstPersonMovementAudio = GetComponent<AudioSource>();
+    }
 
     void Awake()
     {
@@ -53,6 +59,7 @@ public class FirstPersonMovement : MonoBehaviour
             // Apply upward force using Impulse mode for a "snap" effect
             lastInputTime = Time.time; 
             rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            FirstPersonMovementAudio.PlayOneShot(FireSound, 1.0f);
         }
 
     }
