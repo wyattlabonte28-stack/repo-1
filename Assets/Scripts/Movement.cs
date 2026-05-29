@@ -1,5 +1,6 @@
 using UnityEngine;
-
+using System.Collections;
+using System.Collections.Generic;
 
 public class Movement : MonoBehaviour
 
@@ -7,11 +8,13 @@ public class Movement : MonoBehaviour
     public float speed = 5.0f;
     public float horizontalInput;
     public float verticalInput;
+    public AudioClip WoodSound;
+    private AudioSource MovementAudio;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        MovementAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,6 +27,7 @@ public class Movement : MonoBehaviour
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
         transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
     //    }
+        MovementAudio.PlayOneShot(WoodSound, 1.0f);
         }
     }
 
