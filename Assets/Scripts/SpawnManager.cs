@@ -9,11 +9,15 @@ public class SpawnManager : MonoBehaviour
     private float spawnRange = 9.0f;
     public int enemyCount;
     public int waveNumber = 1;
+    public AudioClip DieSound; 
+    public AudioClip GroanSound;
+    private AudioSource SpawnManagerAudio;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         SpawnEnemyWave(waveNumber);
+        SpawnManagerAudio = GetComponent<AudioSource>();
     }
 
     void SpawnEnemyWave(int enemiesToSpawn)
@@ -34,7 +38,8 @@ public class SpawnManager : MonoBehaviour
             SpawnEnemyWave(waveNumber);
             Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
         }
-    
+        SpawnManagerAudio.PlayOneShot(DieSound, 1.0f);
+        SpawnManagerAudio.PlayOneShot(GroanSound, 1.0f);
     }
     private Vector3 GenerateSpawnPosition ()
     {
