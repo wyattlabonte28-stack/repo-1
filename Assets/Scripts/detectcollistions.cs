@@ -1,22 +1,41 @@
 using UnityEngine;
+using System.Collections;
 
-public class detectcollistions : MonoBehaviour
+public class DetectCollisions : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject playerPrefab;
+    public Transform spawnPoint;
+    public float respawnDelay = 3.0f;
+    private GameObject currentPlayer;
+    private bool isRespawning = false;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        currentPlayer = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        if (other.CompareTag("Player"))
+        {
+            Destroy(currentPlayer);
+        }
+    }
+
+    void Update()
+    {
+        if (currentPlayer == null && !isRespawning)
+        {
+            StartCoroutine(RespawnRoutine());
+        }
+    }
+
+    IEnumerator RespawnRoutine()
+    {
+        isRespawning = true;
+        yield return new WaitForSeconds(respawnDelay);
+        currentPlayer = Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
+        isRespawning = false;
     }
 }
 

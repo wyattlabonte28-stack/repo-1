@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProMove : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float speed = 10.0f;
     public float delete = 50; 
 
     public GameObject Enemy;
