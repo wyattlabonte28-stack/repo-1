@@ -274,6 +274,8 @@ GameObject:
   - component: {fileID: 8348066718472208416}
   - component: {fileID: -2272257853464466283}
   - component: {fileID: 4429073767646833803}
+  - component: {fileID: 6721760966006297238}
+  - component: {fileID: -7282861131838715683}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -583,13 +585,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2382556539362500090}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62c0af1fe39044f618c497f17a90758d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DetectCollisions
   playerPrefab: {fileID: 2382556539362500090}
-  spawnPoint: {fileID: 1950595490374490385, guid: fb5f88a3ce1af46abaa74f02856b7321, type: 3}
+  spawnPoint: {fileID: 0}
   respawnDelay: 3
 --- !u!136 &4429073767646833803
 CapsuleCollider:
@@ -614,6 +616,29 @@ CapsuleCollider:
   m_Height: 4.0665007
   m_Direction: 1
   m_Center: {x: 0, y: 1.5332503, z: 0.012875557}
+--- !u!114 &6721760966006297238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2382556539362500090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964a1ea3893fd48f9838156bec70f62e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  playerPrefab: {fileID: 2382556539362500090}
+  spawnPoint: {fileID: 0}
+  respawnDelay: 0.1
+--- !u!81 &-7282861131838715683
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2382556539362500090}
+  m_Enabled: 1
 --- !u!1001 &770552307128212552
 PrefabInstance:
   m_ObjectHideFlags: 0
